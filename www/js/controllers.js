@@ -146,6 +146,7 @@ angular.module('demo.controllers', [])
 
 .controller('CardsCtrl', function($scope, TDCardDelegate) {
   var cardTypes = [
+      {image: 'img/steak.jpg'},
     { image: 'img/salad.jpg' },
     { image: 'img/ribs.jpg' },
     { image: 'img/spaghetti.jpg' },
