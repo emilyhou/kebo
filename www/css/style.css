@@ -1,7 +1,7 @@
 /* Empty. Add your own CSS if you like */
 #container {
   background: #ccc; 
-  border-radius: 10px;   
+  border-radius: 15px;   
   width: 238px;
   left: auto;
   display: block;
@@ -18,7 +18,7 @@
 }
 #outercontainer1 {
   background: #bbb; 
-  border-radius: 10px;   
+  border-radius: 15px;   
   width: 238px;
   left: auto;
   display: block;
@@ -35,7 +35,7 @@
 }
 #outercontainer2 {
   background: #aaa; 
-  border-radius: 10px;   
+  border-radius: 15px;   
   width: 238px;
   left: 60px;
   display: block;
@@ -53,7 +53,7 @@
 .buddy {
   display: none;
   background: #ddd;
-  border-radius: 10px;
+  border-radius: 15px;
   color: #fff;
   padding: 10px;
   width: 238px;
@@ -160,7 +160,7 @@ button {
   position: relative;
   display: inline-block;
   padding: 2px 2px 6px 2px;
-  margin-left: 30px;
+  margin-left: 13px;
   margin-top: 10px;
   font-size: 20px;
   font-family: cursive;
@@ -230,10 +230,14 @@ button {
   padding: 10px;
   width: 238px;
   height: 100px;
-  bottom: 60px;
+  position: absolute;
   margin-left: 65px;
   margin-bottom: 20px;
-
-  position: absolute;
   cursor: hand;
+}
+.well {
+  width: 238px;
+  position: absolute;
+  margin-top: 400px;
+  margin-left: 70px;
 }

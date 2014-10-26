@@ -36,17 +36,15 @@ angular.module('demo', ['ionic', 'demo.controllers', 'demo.services', 'ngAnimate
       templateUrl: 'main.html',
       controller: 'MainCtrl'
     })
-
     .state('queue', {
       url: '/queue',
       templateUrl: 'queue.html',
       controller: 'QueueCtrl'
     })
-    
-    .state('restaurant', {
-        url: '/restaurant',
-        templateUrl: 'restaurant.html',
-        controller: 'RestaurantCtrl'
+    .state('settings', {
+      url: '/settings',
+      templateUrl: 'settings.html',
+      controller: 'MainCtrl'
     });
 
   // if none of the above states are matched, use this as the fallback

@@ -13,26 +13,24 @@ angular.module('demo.controllers', [])
     $scope.firstRight = $scope.firsts[1];
     $scope.end = End.all();
     $scope.counter = $scope.dishes.length;
-    /*
-function trash() {
-    console.log("someone dun gooft");
-}
-
-function yum() {
-    console.log("you liked a dish!!!");
-}
-
-function info(){
-    console.log("happy birthday");
-}*/
     
+    $scope.share = function() {
+        $ionicPopup.show({
+            title: "Share",
+            buttons: [
+                {text: '<a class="button button-icon icon ion-social-facebook"></a>'},
+                {text: '<a class="button button-icon icon ion-social-twitter"></a>'},
+                {text: '<a class="button button-icon icon ion-social-pinterest"></a>'},
+            ]
+        });
+    };
     
     $scope.onSwipeRight = function(index, element){
         $scope.counter--;
         if (this.firstRight) {
             $ionicPopup.show({
-            template: 'Swipe right to LIKE and add to your favorites',
-            title: 'Alert',
+            template: 'This means you like this dish',
+            title: 'Swipe Right',
             scope: $scope,
             buttons: [
                 { text: 'OK' }
@@ -46,8 +44,8 @@ function info(){
         this.dishes.splice(index, 1);
         if (this.counter === 0) {
             $ionicPopup.show({
-            template: 'No more pics to see. Stay Tuned.',
-            title: 'Alert',
+            template: 'Keep Thinking Kebo!',
+            title: 'No More Dishes',
             scope: $scope,
             buttons: [
                 { text: 'OK' }
@@ -70,8 +68,8 @@ function info(){
         $scope.counter--;
         if (this.firstLeft) {
             var myPopup = $ionicPopup.show({
-            template: 'Swipe left to ignore',
-            title: 'Alert',
+            template: 'This means you are not feeling this dish',
+            title: 'Swipe Left',
             scope: $scope,
             buttons: [
                 { text: 'OK' }
@@ -85,8 +83,8 @@ function info(){
         this.dishes.splice(index, 1);
         if (this.counter === 0) {
             var myPopup = $ionicPopup.show({
-            template: 'No more pics to see. Stay Tuned.',
-            title: 'Alert',
+            template: 'Keep Thinking Kebo!',
+            title: 'No More Dishes',
             scope: $scope,
             buttons: [
                 { text: 'OK' }
@@ -106,14 +104,10 @@ function info(){
     
     $scope.onTap = function(index) {
         var index = $scope.dishes.indexOf(this.dish);
-        //alert(this.dishes[index].dish);
 
-            // An elaborate, custom popup
             var myPopup = $ionicPopup.show({
-            //template: '$' + this.dishes[index].price + '<br>' + this.dishes[index].rating + "/5",
             title:  '<br>' + this.dishes[index].dish + '<br>' + '$' +this.dishes[index].price + '<br><br>' + this.dishes[index].restaurant
                     + '<br><br>' + this.dishes[index].distance + 'miles away' + '<br>',
-            //subTitle: '$' + this.dishes[index].price + '<br>' +this.dishes[index].rating + "/5",
             scope: $scope,
             buttons: [
                 { text: 'Eat this' },
@@ -123,7 +117,6 @@ function info(){
     }
     $ionicModal.fromTemplateUrl("queue.html", {
         scope: $scope,
-        animation: 'slide-in-up'
     }).then(function(modal) {
         $scope.modal = modal;
     });
