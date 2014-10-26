@@ -16,11 +16,11 @@ angular.module('demo.controllers', [])
     
     $scope.share = function() {
         $ionicPopup.show({
-            title: "Share",
+            title: 'Share',
             buttons: [
                 {text: '<a class="button button-icon icon ion-social-facebook"></a>'},
                 {text: '<a class="button button-icon icon ion-social-twitter"></a>'},
-                {text: '<a class="button button-icon icon ion-social-pinterest"></a>'},
+                {text: '<a class="button button-icon icon ion-social-pinterest"></a>'}
             ]
         });
     };
@@ -55,14 +55,14 @@ angular.module('demo.controllers', [])
         }
         else {
             if(index > 0 && index <= this.dishes.length - 1){
-                nextItem = this.dishes[index - 1]
+                nextItem = this.dishes[index - 1];
             } else {
                 nextItem = this.dishes[this.dishes.length-1];
             }
             this.favorites.push(this.dish);
             this.dish = nextItem;
         }
-    }
+    };
     
     $scope.onSwipeLeft = function(index, element){
         $scope.counter--;
@@ -100,7 +100,7 @@ angular.module('demo.controllers', [])
             }
             this.dish = nextItem;
         }
-    }
+    };
     
     $scope.onTap = function(index) {
         var index = $scope.dishes.indexOf(this.dish);
@@ -114,7 +114,7 @@ angular.module('demo.controllers', [])
                 { text: 'No thanks' }
             ]
         });
-    }
+    };
     $ionicModal.fromTemplateUrl("queue.html", {
         scope: $scope,
     }).then(function(modal) {
@@ -144,12 +144,37 @@ angular.module('demo.controllers', [])
     };
 })
 
-.controller('QueueCtrl', function($scope, $state) {
-    $scope.viewDetails = function() {
-        alert("Hello");
-        $state.go('restaurant');
-    };
+.controller('CardsCtrl', function($scope, TDCardDelegate) {
+  var cardTypes = [
+    { image: 'img/salad.jpg' },
+    { image: 'img/ribs.jpg' },
+    { image: 'img/spaghetti.jpg' },
+    { image: 'img/babyback.jpg' },
+    { image: 'img/gutenburger.jpg' },
+    {image: 'img/cookies.jpg' },
+    {image: 'img/Logo.png'}
+  ];
+
+  $scope.cards = Array.prototype.slice.call(cardTypes, 0);
+
+  $scope.cardDestroyed = function(index) {
+    $scope.cards.splice(index, 1);
+  };
+
+  $scope.addCard = function() {
+    var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
+    newCard.id = Math.random();
+    $scope.cards.push(angular.extend({}, newCard));
+  }
 })
 
-.controller('RestaurantCtrl', function($scope) {
-})
+.controller('CardCtrl', function($scope, TDCardDelegate) {
+  $scope.cardSwipedLeft = function(index) {
+    console.log('LEFT SWIPE');
+    $scope.addCard();
+  };
+  $scope.cardSwipedRight = function(index) {
+    console.log('RIGHT SWIPE');
+    $scope.addCard();
+  };
+});
