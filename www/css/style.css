@@ -1,0 +1,239 @@
+/* Empty. Add your own CSS if you like */
+#container {
+  background: #ccc; 
+  border-radius: 10px;   
+  width: 238px;
+  left: auto;
+  display: block;
+  height: 265px;
+  top: auto;
+  position: absolute;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#outercontainer1 {
+  background: #bbb; 
+  border-radius: 10px;   
+  width: 238px;
+  left: auto;
+  display: block;
+  height: 270px;
+  top: auto;
+  position: absolute;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#outercontainer2 {
+  background: #aaa; 
+  border-radius: 10px;   
+  width: 238px;
+  left: 60px;
+  display: block;
+  height: 275px;
+  top: 30px;
+  position: absolute;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.buddy {
+  display: none;
+  background: #ddd;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  width: 238px;
+  height: 260px;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  position: absolute;
+  cursor: hand;
+}
+.rotate-left {
+  transform: rotate(30deg) scale(0.8);
+  transition: 1s;
+  margin-left: 400px;
+  cursor: e-resize;
+  opacity: 0;
+}
+.rotate-right {
+  transform: rotate(-30deg) scale(0.8);
+  transition: 1s;
+  opacity: 0;
+  margin-left: -400px;
+  cursor: w-resize;
+}
+.avatar {
+
+  width: 215px;
+  height: 215px;
+  display: block;
+  margin-top: 1px;
+  margin-left: 1px;
+  background-size: 100% auto !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.like {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 2px solid green;
+  color: green;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  text-shadow: none;
+}
+.dislike {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 2px solid red;
+  color: red;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  text-shadow: none;
+}
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.name-of-food {
+  font-size: 18px;
+  color: rgb(0,0,0);
+  text-align: center;
+}
+
+button {
+    height: 30px;
+    width: 30px;
+    border-color: #BCD2EE;
+    background-color: white;
+    border-width: 2px;
+    border-radius: 15px;
+    margin: auto;
+    text-align: center;
+    font-size: 20pt;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: top;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.btn-info{
+  height: 40px;
+  width: 40px;
+  position: relative;
+  display: inline-block;
+  padding: 2px 2px 6px 2px;
+  margin-left: 30px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: cursive;
+  font-style: italic;
+  /*font-weight: bold;*/
+  font-weight: 600;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: top;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+
+}
+
+.btn-positive {
+  vertical-align: middle;
+  color: #fff;
+  font-style: normal;
+  background-color: #5cb85c;
+  border: 1px solid #5cb85c;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.btn-negative {
+  vertical-align: middle;
+  color: #fff;
+  background-color: #c9302c;
+  border: 1px solid #c9302c;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.btn-positive:active, .btn-positive.active {
+  color: #fff;
+  background-color: #298529;
+  border: 1px solid #298529;
+}
+
+.btn-negative:active, .btn-negative.active {
+  color: #fff;
+  background-color: #960000;
+  border: 1px solid #960000;
+}
+
+.bar .btn.pull-right {
+  margin-left: 10px;
+}
+.bar .btn.pull-left {
+  margin-right: 10px;
+}
+.house {
+  display: block;
+  background: #ddd;
+  border-radius: 10px;
+  background-color: rgba(255,0,255,0);
+  padding: 10px;
+  width: 238px;
+  height: 100px;
+  bottom: 60px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+
+  position: absolute;
+  cursor: hand;
+}

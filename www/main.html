@@ -1,0 +1,50 @@
+
+<ion-view title="{{myTitle}}">
+    <ion-nav-buttons side="right">
+      <a class="button button-icon icon ion-ios7-gear" ui-sref='settings'></a>
+    </ion-nav-buttons>
+  <ion-content class="padding">
+      
+    <div id="outercontainer2">
+        <div id="outercontainer1">
+            <div id="container">
+                <div id='div1' style="display:block;" on-swipe-right="onSwipeRight($index, 'div1')" on-swipe-left="onSwipeLeft($index, 'div1')" class=" buddy class-animation" on-tap="onTap($index)">
+                    <img src="img/cookies.jpg" width=auto height=auto></img>
+                    <p class=name-of-food>Very Delicious Cookies</p>
+                </div>
+                <div id='div2' style="display:block;" on-swipe-right="onSwipeRight($index, 'div2')" on-swipe-left="onSwipeLeft($index, 'div2')" class=" buddy class-animation" on-tap="onTap($index)">
+                    <img src="img/spaghetti.jpg" width=auto height=auto></img>
+                    <p class=name-of-food>House Special Spaghetti</p>
+                </div>
+                <div id='div3' style="display:block;" on-swipe-right="onSwipeRight($index, 'div3')" on-swipe-left="onSwipeLeft($index, 'div3')" class=" buddy class-animation" on-tap="onTap($index)">
+                    <img src="img/ribs.jpg" width=auto height=auto></img>
+                    <p class=name-of-food>Smeely Smokey ribs</p>
+                </div>
+                <div id='div4' style="display:block;" on-swipe-right="onSwipeRight($index, 'div4')" on-swipe-left="onSwipeLeft($index, 'div4')" class=" buddy class-animation" on-tap="onTap($index)">
+                    <img src="img/boatyard BBQ Baby Back Ribs - 18.95.jpg" width=auto height=auto></img>
+                    <p class=name-of-food>BBQ Baby Back Ribs</p>
+                </div>
+                <div id='div5' style="display:block;" on-swipe-right="onSwipeRight($index, 'div5')" on-swipe-left="onSwipeLeft($index, 'div5')" class=" buddy class-animation" on-tap="onTap($index)">
+                    <img src="img/Boatyard Gutenburger - 12.95.jpg" width=auto height=auto></img>
+                    <p class=name-of-food>Gutenburger</p>
+                </div>
+                <div id='div6' style="display:block;" on-swipe-right="onSwipeRight($index, 'div6')" on-swipe-left="onSwipeLeft($index, 'div6')" class=" buddy class-animation" on-tap="onTap($index)">
+                    <img src="img/steak.jpg" width=auto height=auto></img>
+                    <p class=name-of-food>New York Strip Steak</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </ion-content>
+ <div class = "house">
+             <button id="yumbutton" class="btn btn-positive pull-right"
+ng-click="onSwipeRight()"><span class="icon icon-check"></span></button>
+            <button id="infobutton" class="btn btn-info"
+ng-click="onTap()">i</button>
+            <button id="trashbutton"class="btn btn-negative pull-left"
+ng-click="onSwipeLeft()"><span class="icon icon-close"></span></button>
+</div>
+<ion-footer-bar class="bar-assertive" on-swipe-up="swipeQueue()" on-tap="swipeQueue()">
+  <h1 class="title">Queue</h1>
+</ion-footer-bar>
+</ion-view>
