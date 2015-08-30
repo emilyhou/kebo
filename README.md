@@ -15,7 +15,7 @@ Next time you are looking for something to eat, think **Kebo**.
 
 Kebo came out of 3 Day Startup at Cornell University.
 
-Members: Garrett Lay, Nick Teo, Robert Kautzmann, Yicheng Lang, Eileen Liu, Aditya Agashe, Nick Pariso, Jerica Huang, Emily Hou
+Members: Garrett Lay, Emily Hou, Nick Teo, Robert Kautzmann, Yicheng Lang, Eileen Liu, Aditya Agashe, Nick Pariso, Jerica Huang
 
 Credits:
 <ul>
